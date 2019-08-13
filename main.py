@@ -11,6 +11,7 @@ def print_warning(warning_message):
     print(warning_message)
     time.sleep(2)
 
+
 def intro():
     print_general("A warning alarm screams in your ears.")
     print_warning("WARNING: Low Oxygen")
@@ -28,7 +29,7 @@ def to_die():
                   "1. Put on emergency breather.\n"
                   "2. Asphyxiate.")
     response = input("(Please enter 1 or 2)\n")
-    if response == "1":
+    if response == '1':
         print_general("You feel relief as your lungs fill with \n"
                       "clean air.")
         print_warning("WARNING: Low Oxygen")
@@ -42,9 +43,11 @@ def to_die():
         print_general("Computer can not compute.")
         to_die()
 
+
 def check_o2():
     oxygen = random.randint(0, 100)
-    print_general("You turn off the alarm, and check O2 levels on the breather.")
+    print_general("You turn off the alarm, and check O2 levels on "
+                  "the breather.")
     print_general("O2 levels are: " + str(oxygen) + "%")
     if oxygen > 50:
         print_general("You have plenty of oxygen to make repairs!")
@@ -59,12 +62,14 @@ def check_o2():
         print_general("Would you like to play again?")
         play_again()
 
+
 def repairs():
     print_general("You can hear oxygen squealing out of your ship.")
     print_general("You can see a tiny puncture directly above your \n"
                   "head in the glass canopy. But you also notice...")
     time.sleep(3)
-    print_general("A candy bar floating just outside the ship! You are hungry.")
+    print_general("A candy bar floating just outside the ship! You are "
+                  "hungry.")
     response = input("What do you do?\n"
                      "1. Open the canopy to get the candy bar.\n"
                      "2. Put duct tape on the leak. Sealing it.\n"
@@ -93,7 +98,6 @@ def repairs():
         repairs()
 
 
-
 def play_again():
     response = input("(Please enter: Y or N)\n").lower()
     if response == 'y':
@@ -101,8 +105,10 @@ def play_again():
     if response == 'n':
         print_general("Thanks for playing!")
 
+
 def raptor4():
     intro()
     to_die()
+
 
 raptor4()
