@@ -28,7 +28,7 @@ def to_die():
                   "1. Put on emergency breather.\n"
                   "2. Asphyxiate.")
     response = input("(Please enter 1 or 2)\n")
-    if response == '1':
+    if response == "1":
         print_general("You feel relief as your lungs fill with \n"
                       "clean air.")
         print_warning("WARNING: Low Oxygen")
@@ -71,13 +71,13 @@ def repairs():
                      "(Please enter 1 or 2)\n")
     if response == '1':
         print_general("In order to reach the delicious candy bar you must"
-                      " unbuckle.")
+                      " unbuckle, and open the canopy. You do this.")
         print_general("Your body slowly starts to move toward the bar.")
         print_general("Just as you reach it a piece of debris crashes "
                       "into your ship pushing it away from you rapidly.")
         print_general("As it rushes away your breather is pulled with it!")
         time.sleep(3)
-        print_general("You die is seconds.")
+        print_general("You die in seconds.")
         print_general("You lost...")
         print_general("Would you like to play again?")
         play_again()
@@ -88,6 +88,9 @@ def repairs():
         print_general("YOU WON!")
         print_general("Would you like to play again?")
         play_again()
+    else:
+        print_general("Computer can not compute.")
+        repairs()
 
 
 
